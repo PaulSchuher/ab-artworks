@@ -37,13 +37,16 @@ gem 'jbuilder', '~> 2.5'
 
 # Use MySQL as DB server
 gem 'mysql2'
-
+# Use FFaker for seeds data and fixtures
+gem 'ffaker'
 # Use vue.js assets
 gem 'vuejs-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl'
 end
 
 group :development do

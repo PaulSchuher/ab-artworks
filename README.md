@@ -1,24 +1,23 @@
-# README
+# AB Coding Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is just a coding test.
 
-Things you may want to cover:
+# Installation process:
 
-* Ruby version
+* Install RVM and Ruby version 2.4 using it
 
-* System dependencies
+* Install MySQL
 
-* Configuration
+* Execute following commad in working directory `cp config/database.yml.example config/database.yml`
 
-* Database creation
+* Put your MySQL credentials into `config/database.yml` file
 
-* Database initialization
+* Run `bundle install` in the working directory
 
-* How to run the test suite
+* Run `bundle exec rake db:setup`
 
-* Services (job queues, cache servers, search engines, etc.)
+* You can run tests using `bundle exec rspec`
 
-* Deployment instructions
+* Run `bundle exec rails server`
 
-* ...
+* Now you can access application through http at `localhost:3000`
