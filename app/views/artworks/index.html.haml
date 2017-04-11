@@ -1,0 +1,19 @@
+.offset-by-one.nine.columns#artworks
+  .twelve-columns.row.artwork{'v-for' => 'artwork in artworks'}
+    .one-third.column
+      %img.u-full-width{src: 'http://news.xinhuanet.com/photo/2015-09/07/128201710_14415816922681n.jpg' }
+    .two-thirds.column.info
+      %h4.title
+        %a{'v-bind:href' => "'/artworks/' + artwork.id"} {{ artwork.title }}
+      .row
+        %span.label Mediums:
+        {{ artwork.mediums }}
+      .row
+        %span.label Year:
+        {{ artwork.year }}
+      .row
+        %span.label Artist:
+        {{ artwork.artist.first_name }} {{ artwork.artist.last_name }}
+  .button.primary#prev-btn{'v-if' => '!firstPage'} < Previous
+  .button.primary#next-btn{'v-if' => '!lastPage'} Next >
+  Page {{ page }} of {{ pages }}

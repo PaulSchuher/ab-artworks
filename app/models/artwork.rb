@@ -4,4 +4,8 @@ class Artwork < ApplicationRecord
   validates_associated :artist
 
   belongs_to :artist
+
+  def publish!
+    update_attribute :published, true unless published
+  end
 end

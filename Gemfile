@@ -39,8 +39,15 @@ gem 'jbuilder', '~> 2.5'
 gem 'mysql2'
 # Use FFaker for seeds data and fixtures
 gem 'ffaker'
+gem 'kaminari'
+
+# Frontend stuff
+# Use haml markup
+gem "haml"
 # Use vue.js assets
 gem 'vuejs-rails'
+# Use skeleton css framework for fast bootstrapping
+gem 'skeleton-rails', git: 'https://github.com/helios-technologies/skeleton-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

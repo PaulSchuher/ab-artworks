@@ -1,0 +1,19 @@
+$font-color: #7B979D;
+#artworks {
+  margin-top: 20px;
+  .artwork {
+    border-bottom: 1px solid;
+    .title {
+      padding-top: 10px;
+      a {
+        color: $font-color;
+        text-decoration: none;
+      }
+    }
+    .label {
+      font-size: 12pt;
+      color: $font-color;
+      font-weight: bold;
+    }
+  }
+}
