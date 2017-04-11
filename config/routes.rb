@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root to: 'artworks#index'
 
-  resources :artworks, only: [:index, :show] do
+  resources :artworks, only: [:index] do
     member do
-      post 'publish'
+      get 'toggle_publishment'
     end
   end
 end

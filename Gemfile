@@ -37,13 +37,16 @@ gem 'jbuilder', '~> 2.5'
 
 # Use MySQL as DB server
 gem 'mysql2'
-# Use FFaker for seeds data and fixtures
+# Use FFaker for seeds data and factories
 gem 'ffaker'
+# Use kaminari for pagination
 gem 'kaminari'
+# Use paperclip for images
+gem "paperclip"
 
 # Frontend stuff
 # Use haml markup
-gem "haml"
+gem 'haml'
 # Use vue.js assets
 gem 'vuejs-rails'
 # Use skeleton css framework for fast bootstrapping

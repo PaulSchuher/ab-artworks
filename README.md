@@ -17,6 +17,8 @@ Description of the task:
 
 * Install MySQL
 
+* Install imagemagick (required for paperclip gem)
+
 * Execute following commad in working directory `cp config/database.yml.example config/database.yml`
 
 * Put your MySQL credentials into `config/database.yml` file

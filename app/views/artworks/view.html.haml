@@ -1,11 +1,11 @@
 .offset-by-one.nine.columns#artworks
   .twelve-columns.row.artwork{'v-for' => 'artwork in artworks'}
     .one-third.column
-      %img.u-full-width{'v-bind:src' => 'artwork.picture_url' }
+      %a{'v-bind:href' => "'/artworks/' + artwork.id"}
+        %img.u-full-width{src: 'http://news.xinhuanet.com/photo/2015-09/07/128201710_14415816922681n.jpg' }
       .button.primary{'v-on:click' => 'togglePublishment(artwork)'} {{ (artwork.published) ? 'Unpublish' : 'Publish' }}
     .two-thirds.column.info
-      %h4.title
-        {{ artwork.title }}
+      %h4.title {{ artwork.title }}
       .row
         %span.label Mediums:
         {{ artwork.mediums }}
@@ -15,6 +15,3 @@
       .row
         %span.label Artist:
         {{ artwork.artist.first_name }} {{ artwork.artist.last_name }}
-  .button.primary{'v-if' => '!firstPage', 'v-on:click' => 'previousPage()'} < Previous
-  .button.primary{'v-if' => '!lastPage', 'v-on:click' => 'nextPage()'} Next >
-  Page {{ page }} of {{ pages }}

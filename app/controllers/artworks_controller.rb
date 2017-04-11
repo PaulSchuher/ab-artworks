@@ -5,21 +5,17 @@ class ArtworksController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        @artworks = Artwork.includes(:artist).limit 5
-        render json: @artworks, include: :artist
+        @artworks = Artwork.includes(:artist).page(params[:page]).per(3)
+        render json: { artworks: @artworks.to_json(include: :artist, methods: [:picture_url]), pages:  @artworks.total_pages, page: @artworks.current_page }
       end
     end
   end
 
-  def show
-
-  end
-
-  def publish
-    success = @artwork.publish!
+  def toggle_publishment
+    success = @artwork.toggle_publishment!
 
     respond_to do |format|
-      format.json { render json: { success: success } }
+      format.json { render json: { published: @artwork.published } }
     end
   end
 
