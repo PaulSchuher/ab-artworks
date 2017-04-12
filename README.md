@@ -15,13 +15,7 @@ Description of the task:
 
 * Install RVM and Ruby version 2.4 using it
 
-* Install MySQL
-
 * Install imagemagick (required for paperclip gem)
-
-* Execute following commad in working directory `cp config/database.yml.example config/database.yml`
-
-* Put your MySQL credentials into `config/database.yml` file
 
 * Run `bundle install` in the working directory
 
